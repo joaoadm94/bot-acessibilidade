@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu do Banco</title>
+    <style>
+        /* Estilos de base para o menu */
+        ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            list-style-type: none;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f8f3d4;
+            font-weight: bold;
+        }
+
+        /* Estilos adicionais para o menu */
+        #menu {
+            background-color: #15418e;
+            text-align: center;
+        }
+
+        #menu a:hover {
+            color: #eeff00;
+        }
+
+        body {
+            background-color: #f8f3d4;
+        }
+
+        #banner-gradient {
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) 20%, transparent 30%);
+        }
+
+        /* Estilos para o banner */
+        #banner-image {
+            background-image: url('good-faces-a4-leiGIUbk-unsplash.jpg'); /* Substitua 'seu_banner.jpg' pelo caminho para sua imagem de banner */
+            background-size: 30% ;
+            background-repeat: no-repeat;
+            background-position-y: 25%;
+            height: 400px; /* Altura do banner */
+        }
+
+        /* Estilos para o texto no banner */
+        #banner-text {
+            position: absolute;
+            z-index: 30;
+            top: 18%;
+            right: 32%;
+            text-align: center;
+            color: #15418e; /* Cor do texto no banner */
+            font-size: 72px; /* Tamanho da fonte do texto no banner */
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        #content {
+            background-color: #f8f3d4;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <span id="banner-text">
+            Banco Universitário
+        </span>
+        <div id="banner-gradient">
+            <div id="banner-image">
+            </div>
+        </div>    
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Contas</a></li>
+            <li><a href="#">Transferências</a></li>
+            <li><a href="#">Pagamentos</a></li>
+            <li><a href="#">Cartões</a></li>
+            <li><a href="#">Empréstimos e Financiamentos</a></li>
+            <li><a href="#">Investimentos</a></li>
+            <li><a href="#">Suporte ao Cliente</a></li>
+            <li><a href="#">Segurança</a></li>
+            <li><a href="#">Sobre o Banco</a></li>
+            <li><a href="#">Aplicativo Móvel</a></li>
+            <li><a href="#">Termos e Condições</a></li>
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+    <div id="content">
+    </div>
+    <script>
+        !(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+                // Replace 1.x.x with the version that you want
+                (e.async = !0),
+                (e.onload = () => {
+                window.WebChat.default(
+                    {
+                    customData: { language: "en" },
+                    socketUrl: "https://bf-botfront.development.agents.botfront.cloud",
+                    // add other props here
+                    },
+                    null
+                );
+                }),
+            t.insertBefore(e, t.firstChild);
+        })();
+    </script>
+</body>
+</html>
+
