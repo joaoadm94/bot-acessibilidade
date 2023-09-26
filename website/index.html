@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        !(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src = "file:////home/joaoadm94/Documents/UnB/TCC/rasa-webchat/lib/index.js"),
+                //"http://localhost:8080/index.js"),
+                // Replace 1.x.x with the version that you want
+                (e.async = !0),
+                (e.onload = () => {
+                window.WebChat.default(
+                    {
+                    initPayload: '/greet',
+                    customData: { language: "en" },
+                    socketUrl: "http://0.0.0.0:5005",
+                    //socketUrl: "https://bf-botfront.development.agents.botfront.cloud",
+                    // add other props here
+                    },
+                    null
+                );
+                }),
+            t.insertBefore(e, t.firstChild);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu do Banco</title>
@@ -99,27 +122,7 @@
     </div>
     <div id="content">
     </div>
-    <script>
-        !(function () {
-            let e = document.createElement("script"),
-                t = document.head || document.getElementsByTagName("head")[0];
-            (e.src =
-                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
-                // Replace 1.x.x with the version that you want
-                (e.async = !0),
-                (e.onload = () => {
-                window.WebChat.default(
-                    {
-                    customData: { language: "en" },
-                    socketUrl: "https://bf-botfront.development.agents.botfront.cloud",
-                    // add other props here
-                    },
-                    null
-                );
-                }),
-            t.insertBefore(e, t.firstChild);
-        })();
-    </script>
+    
 </body>
 </html>
 
